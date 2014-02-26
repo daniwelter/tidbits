@@ -1,0 +1,60 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>uk.ac.ebi.fgpt.RubbishTester</groupId>
+  <artifactId>RubbishTester</artifactId>
+  <version>1.0-SNAPSHOT</version>
+  <packaging>jar</packaging>
+
+  <name>RubbishTester</name>
+  <url>http://maven.apache.org</url>
+
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+  </properties>
+
+  <dependencies>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>3.8.1</version>
+      <scope>test</scope>
+    </dependency>
+      <dependency>
+          <groupId>org.semanticweb.owlapi</groupId>
+          <artifactId>owlapi</artifactId>
+          <version>3.2.4</version>
+      </dependency>
+      <dependency>
+          <groupId>org.semanticweb</groupId>
+          <artifactId>HermiT</artifactId>
+          <version>1.3.6</version>
+      </dependency>
+      <dependency>
+          <groupId>org.apache.xmlgraphics</groupId>
+          <artifactId>batik-dom</artifactId>
+          <version>1.7</version>
+      </dependency>
+
+      <dependency>
+          <groupId>org.apache.xmlgraphics</groupId>
+          <artifactId>batik-swing</artifactId>
+          <version>1.7</version>
+      </dependency>
+
+      <dependency>
+          <groupId>org.apache.xmlgraphics</groupId>
+          <artifactId>batik-transcoder</artifactId>
+          <version>1.7</version>
+          <scope>compile</scope>
+          <exclusions>
+              <exclusion>
+                  <artifactId>fop</artifactId>
+                  <groupId>fop</groupId>
+              </exclusion>
+          </exclusions>
+      </dependency>
+
+  </dependencies>
+</project>
