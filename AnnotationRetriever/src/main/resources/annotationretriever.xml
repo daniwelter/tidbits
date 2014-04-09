@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+
+
+     <!-- Study service -->
+    <bean name="searcher" class="uk.ac.ebi.fgpt.tidbits.AnnotationRetriever.service.AnnotationRetriever">
+        <property name="dispatcherService" ref="dispatcherService" />
+        <property name="inputFile" value="/home/dwelter/input.txt" />
+    </bean>
+
+
+    <!-- Dispatcher service, should start on application startup -->
+    <bean name="dispatcherService"
+          class="uk.ac.ebi.fgpt.tidbits.AnnotationRetriever.service.AnnotatorDispatcherService">
+    </bean>
+
+
+</beans>
