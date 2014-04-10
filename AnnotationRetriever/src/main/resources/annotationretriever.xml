@@ -9,13 +9,14 @@
      <!-- Study service -->
     <bean name="searcher" class="uk.ac.ebi.fgpt.tidbits.AnnotationRetriever.service.AnnotationRetriever">
         <property name="dispatcherService" ref="dispatcherService" />
-        <property name="inputFile" value="/home/dwelter/input.txt" />
+        <property name="inputFile" value="/Users/Dani/Development/input.txt" />
     </bean>
 
 
     <!-- Dispatcher service, should start on application startup -->
     <bean name="dispatcherService"
           class="uk.ac.ebi.fgpt.tidbits.AnnotationRetriever.service.AnnotatorDispatcherService">
+        <property name="outFile" value="/Users/Dani/output2.txt" />
     </bean>
 
 

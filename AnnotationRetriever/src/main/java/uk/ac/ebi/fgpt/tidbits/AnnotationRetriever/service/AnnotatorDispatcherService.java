@@ -40,8 +40,7 @@ public class AnnotatorDispatcherService {
     static final ObjectMapper mapper = new ObjectMapper();
 
     private Logger log = LoggerFactory.getLogger(getClass());
-
-
+    private String outFile;
 
 
     public AnnotatorDispatcherService(){
@@ -120,7 +119,7 @@ public class AnnotatorDispatcherService {
   //      try {
       //      if (response.getStatusLine().getStatusCode() == HttpStatus.OK.value()) {
                 JsonNode annotations = jsonToNode(post(annotatorString, queryUri));
-                printAnnotations(annotations);
+                printAnnotations(annotations, outFile);
 
 
         //        results = mapper.readValue(entityIn, new TypeReference<List<BPAnnotation>>() {});
@@ -136,10 +135,10 @@ public class AnnotatorDispatcherService {
 //        }
     }
 
-    private static void printAnnotations(JsonNode annotations) {
+    private static void printAnnotations(JsonNode annotations, String fileName) {
 
         try {
-            File f = new File("/home/dwelter/testoutput3.txt");
+            File f = new File(fileName);
 
             Writer out= null;
 
@@ -300,4 +299,11 @@ public class AnnotatorDispatcherService {
     }
 
 
+    public void setOutFile(String outFile) {
+        this.outFile = outFile;
+    }
+
+    public String getOutFile() {
+        return outFile;
+    }
 }
