@@ -22,9 +22,9 @@
       <scope>test</scope>
     </dependency>
       <dependency>
-          <groupId>org.semanticweb.owlapi</groupId>
-          <artifactId>owlapi</artifactId>
-          <version>3.2.4</version>
+          <groupId>net.sourceforge.owlapi</groupId>
+          <artifactId>owlapi-distribution</artifactId>
+          <version>3.4.10</version>
       </dependency>
       <dependency>
           <groupId>hermit</groupId>

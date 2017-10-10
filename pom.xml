@@ -42,6 +42,27 @@
           <artifactId>jackson-core-asl</artifactId>
           <version>1.9.9</version>
       </dependency>
+      <!--<dependency>-->
+          <!--<groupId>net.sourceforge.owlapi</groupId>-->
+          <!--<artifactId>owlapi-api</artifactId>-->
+          <!--<version>3.4.4</version>-->
+      <!--</dependency>-->
+      <!--<dependency>-->
+          <!--<groupId>net.sourceforge.owlapi</groupId>-->
+          <!--<artifactId>owlapi-api</artifactId>-->
+          <!--<version>3.4.4</version>-->
+      <!--</dependency>-->
+
+      <dependency>
+          <groupId>net.sourceforge.owlapi</groupId>
+          <artifactId>owlapi-distribution</artifactId>
+          <version>3.4.10</version>
+      </dependency>
+      <dependency>
+          <groupId>net.sourceforge.owlapi</groupId>
+          <artifactId>owlapi-distribution</artifactId>
+          <version>3.4.10</version>
+      </dependency>
   </dependencies>
   <modules>
     <module>AnnotationRetriever</module>
